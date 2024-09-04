@@ -24,8 +24,6 @@ Route::middleware('auth')->group(function () {
         Route::resource('courses', CourseController::class)->middleware('role:teacher');
         Route::get('/learning', [LearningController::class, 'index'])->middleware('role:student')->name('learning.index');
     });
-
-
 });
 
 require __DIR__ . '/auth.php';
