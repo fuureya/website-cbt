@@ -49,7 +49,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href=""
+                        <a href="#"
                             class="p-[10px_16px] flex items-center gap-[14px] rounded-full h-11 transition-all duration-300 hover:bg-[#2B82FE]">
                             <div>
                                 <img src="{{ asset('assets/images/icons/sms-tracking.svg') }}" alt="icon">
