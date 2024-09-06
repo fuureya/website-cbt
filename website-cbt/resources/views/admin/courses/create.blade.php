@@ -173,9 +173,11 @@
                 <h1 class="font-extrabold text-[30px] leading-[45px]">New Course</h1>
                 <p class="text-[#7F8190]">Provide high quality for best students</p>
             </div>
-            <form class="flex flex-col gap-[30px] w-[500px] mx-[70px] mt-10">
+            <form class="flex flex-col gap-[30px] w-[500px] mx-[70px] mt-10" method="POST"
+                action="{{ route('dashboard.courses.store') }}">
+                @csrf
                 <div class="flex gap-5 items-center">
-                    <input type="file" name="icon" id="icon" class="peer hidden"
+                    <input type="file" name="cover" id="icon" class="peer hidden"
                         onchange="previewFile()" data-empty="true" required>
                     <div
                         class="relative w-[100px] h-[100px] rounded-full overflow-hidden peer-data-[empty=true]:border-[3px] peer-data-[empty=true]:border-dashed peer-data-[empty=true]:border-[#EEEEEE]">
@@ -202,7 +204,7 @@
                         </div>
                         <input type="text"
                             class="font-semibold placeholder:text-[#7F8190] placeholder:font-normal w-full outline-none"
-                            placeholder="Write your better course name" name="name" required>
+                            placeholder="Write your better course name" name="course" required>
                     </div>
                 </div>
                 <div class="group/category flex flex-col gap-[10px]">
@@ -215,7 +217,7 @@
                         </div>
                         <select id="category"
                             class="pl-1 font-semibold focus:outline-none w-full text-[#0A090B] invalid:text-[#7F8190] invalid:font-normal appearance-none bg-[url('{{ asset('assets/images/icons/arrow-down.svg') }}')] bg-no-repeat bg-right"
-                            name="category" required>
+                            name="category_id" required>
                             <option value="" disabled selected hidden>Choose one of category</option>
                             <option value="a" class="font-semibold">Digital Marketing</option>
                             <option value="b" class="font-semibold">Web Development</option>
@@ -323,9 +325,9 @@
                     <a href=""
                         class="w-full h-[52px] p-[14px_20px] bg-[#0A090B] rounded-full font-semibold text-white transition-all duration-300 text-center">Add
                         to Draft</a>
-                    <a href="index.html"
+                    <button type="submit" href="index.html"
                         class="w-full h-[52px] p-[14px_20px] bg-[#6436F1] rounded-full font-bold text-white transition-all duration-300 hover:shadow-[0_4px_15px_0_#6436F14D] text-center">Save
-                        Course</a>
+                        Course</button>
                 </div>
             </form>
         </div>
