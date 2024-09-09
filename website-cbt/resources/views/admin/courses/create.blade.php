@@ -224,6 +224,7 @@
                         </select>
                     </div>
                 </div>
+                {{-- test --}}
                 <div class="flex flex-col gap-[10px]">
                     <p class="font-semibold">Course Type</p>
                     <div class="flex gap-5 items-center">
