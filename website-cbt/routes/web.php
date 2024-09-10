@@ -39,4 +39,6 @@ Route::middleware('auth')->group(function () {
     });
 });
 
+// yang penting nge push
+
 require __DIR__ . '/auth.php';
